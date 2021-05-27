@@ -52,26 +52,19 @@ class _HomePageAppState extends State<HomePageApp> {
               },
             );
           }),
-      floatingActionButton: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            FloatingActionButton(
-              backgroundColor: Colors.blueAccent,
-              onPressed: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (ctx) => BlogInputScreen(),
-                  ),
-                );
-              },
-              child: Icon(
-                Icons.add,
-                size: 50,
-              ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.blueAccent,
+        onPressed: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (ctx) => BlogInputScreen(),
             ),
-          ],
+          );
+        },
+        child: Icon(
+          Icons.add,
+          size: 50,
         ),
       ),
     );
